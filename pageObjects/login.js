@@ -4,8 +4,8 @@ class Login{
     txtPassowrd="#password";
     btnSubmit="#log-in";
     veriMsg="#time";
-
-    rememberMe=".form-check-label"
+    
+    rememberMe=".form-check-label";
 
     setUserName(username){
         cy.get(this.txtUserName).type(username);
@@ -27,6 +27,7 @@ class Login{
 
     verifyLogin(){
         cy.get(this.veriMsg).should('have.text',"Your nearest branch closes in: 30m 5s");
+    
     }
 }
 export default Login;
